@@ -1,0 +1,18 @@
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    background-color: #c4c4c4;
+    padding: 20px;
+    line-height: 130%;
+    
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: blue; /* Inherits the text color from its parent (or normal text color) */
+}
+
+
+ul {
+    list-style-type: none; 
+}
