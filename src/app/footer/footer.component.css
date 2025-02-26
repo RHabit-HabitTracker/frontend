@@ -10,3 +10,11 @@ footer{
 ul {
     list-style-type: none; 
 }
+
+
+.styledSVG{
+    width: 85%;
+    height: auto;
+    text-decoration: none;
+    
+}

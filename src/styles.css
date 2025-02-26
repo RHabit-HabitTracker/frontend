@@ -1,4 +1,9 @@
 /* Default (Light Mode) styles */
+
+main{
+    z-index: 1;
+}
+
 body {
     background-color: #ffffff; /* Light background */
     color: #000000; /* Dark text */
