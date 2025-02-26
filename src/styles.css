@@ -1,4 +1,9 @@
 /* Default (Light Mode) styles */
+
+main{
+    z-index: 1;
+}
+
 body {
     background-color: #ffffff; /* Light background */
     color: #000000; /* Dark text */
@@ -30,6 +35,41 @@ a:hover {
     background-color: #F5CAC3; /* Yellow highlight */
 }
 
+.login-form h2, .register-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form, .register-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Input group styling */
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
 /* Dark Mode styles */
 @media (prefers-color-scheme: dark) {
     body {
@@ -38,7 +78,7 @@ a:hover {
     }
 
     button {
-        background-color: #77b7e5; /* Green button */
+        background-color: #ACD2ED; /* Green button */
         color: #f0f0f0; /* Light text on button */
     }
 
@@ -47,14 +87,51 @@ a:hover {
     }
 
     a {
-        color: #4CAF50; /* Green links */
+        text-decoration: none;
+        color: #0056b3; /* Green links */
     }
 
     a:hover {
-        color: #45a049; /* Darker green when hovering over links */
+        text-decoration: underline;
+        color: #77b7e5; /* Darker green when hovering over links */
+        background-color: #3A3042;
     }
 
     .highlight {
         background-color: #F5CAC3; /* Orange highlight */
     }
+
+    .login-form h2, .register-form h2 {
+        margin-bottom: 20px;
+        color: #f0f0f0;
+    }
+
+    .login-form, .register-form {
+        background-color: #3A3042;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* Input group styling */
+
+    .input-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #f0f0f0;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #afafaf;
+        border-radius: 5px;
+    }
+
+
 }

@@ -8,7 +8,6 @@
 /* Set the background and overall font styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7fc;
     display: grid;
     place-items: center; /* Center the content vertically and horizontally */
     height: 100vh;
@@ -41,40 +40,6 @@ body {
     margin-bottom: -10%;
     align-self: center;
 }
-
-/* Styling the individual forms */
-.login-form, .register-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    text-align: center;
-}
-
-/* Title styling for forms */
-.login-form h2, .register-form h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Input group styling */
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 
 
 
