@@ -1,0 +1,19 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    line-height: 130%;
+    position: fixed;      
+    top: 0;               
+    left: 0;              
+    width: 100%;         
+    background-color: #7CAE9C;
+    color: black;         
+    text-align: center;   
+    z-index: 1000; 
+}
+a{
+    text-decoration: none;
+}
+
+

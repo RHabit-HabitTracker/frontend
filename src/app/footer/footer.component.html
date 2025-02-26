@@ -1,6 +1,8 @@
 <footer> 
     <section>
-        
+        <object data="/frontend/public/Placeholder_view_vector.svg" type="image/svg+xml" width="200" height="200">
+            Your browser does not support SVGs.
+        </object>
     </section>
 
     <section>
@@ -14,12 +16,13 @@
 
     <nav>
         <ul>
-            <li><a href="/frontend/src/app/login/login.component.html">Login</a></li>
+            <li><a routerLink="/login">Login</a></li>
             <li><a routerLink="/placeholder-site">Impressum</a></li>
             <li><a routerLink="/placeholder-site">Go to Login</a></li>
-            <li><a href="/frontend/src/app/placeholder-site/placeholder-site.component.html">Kontakt</a></li>
-            <li><a href="/frontend/src/app/placeholder-site/placeholder-site.component.html">Nutzungsbedingungen</a></li>
-            <li><a href="/frontend/src/app/placeholder-site/placeholder-site.component.html">Rechtliche Dokumente</a></li>
+            <li><a routerLink="/placeholder-site">Kontakt</a></li>
+            <li><a routerLink="/placeholder-site">Nutzungsbedingungen</a></li>
+            <li><a routerLink="/placeholder-site">Rechtliche Dokumente</a></li>
+            <!--To add the true links, go to the app.routes.ts and add a new route-->
         </ul>
     </nav>
 </footer>

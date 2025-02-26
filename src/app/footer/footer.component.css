@@ -7,12 +7,6 @@ footer{
     
 }
 
-a {
-    text-decoration: none; /* Removes the underline */
-    color: blue; /* Inherits the text color from its parent (or normal text color) */
-}
-
-
 ul {
     list-style-type: none; 
 }
