@@ -1,4 +1,5 @@
 /* Default (Light Mode) styles */
+@import "primeicons/primeicons.css";
 
 main{
     z-index: 1;
