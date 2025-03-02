@@ -1,8 +1,7 @@
 <form
-    formGroup="myForm"
     class="card flex flex-wrap justify-center items-end gap-4"
     (ngSubmit)="onSubmit()"
-    pForm
+    [noValidate]="false"
 >
     <p-card 
         header="Login"
