@@ -14,6 +14,7 @@ import { CardModule } from 'primeng/card';
 export class RegisterFormComponent {
   registerEmail: string | undefined;
   registerPassword: string | undefined;
+  registerPasswordRepeat: string | undefined;
 
   onSubmit() {
     

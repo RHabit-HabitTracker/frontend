@@ -4,8 +4,9 @@
     [noValidate]="false"
 >
     <p-card 
-        header="Login"
+        header="Register"
         [style]="{ width: '25rem', overflow: 'hidden'}">    
+    <br>
     <p-floatlabel variant="on">
             <input 
                 type="email"
@@ -30,6 +31,19 @@
             [required]="true"
              />
             <label for="registerPassword">Passwort</label>
+        </p-floatlabel>
+        <br>
+        <p-floatlabel variant="on">
+            <input 
+            type="password"
+            pInputText
+            id="registerPasswordRepeat" 
+            [(ngModel)]="registerPasswordRepeat"
+            [ngModelOptions]="{standalone: true}"
+            autocomplete="off"
+            [required]="true"
+             />
+            <label for="registerPasswordRepeat">Passwort wiederholen</label>
         </p-floatlabel>
         <br>
         <button
