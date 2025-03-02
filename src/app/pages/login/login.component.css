@@ -1,19 +1,3 @@
-/* Reset some default styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set the background and overall font styling */
-body {
-    font-family: Arial, sans-serif;
-    display: grid;
-    place-items: center; /* Center the content vertically and horizontally */
-    height: 100vh;
-}
-
-/* Container for forms */
 .container {
     display: grid;
     place-items: center;
@@ -31,33 +15,6 @@ body {
     width: 100%;
 }
 
-/* Add the divider (vertical line) */
-.divider {
-    width: 5px;
-    background-color: black; /* Line color */
-    height: 110%; /* Make the line 10% longer than the form height */
-    margin-top: -10%; /* Center the line */
-    margin-bottom: -10%;
-    align-self: center;
-}
-
-
-
-/* Submit button styling */
-.submit-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.submit-btn:hover {
-    background-color: #45a049;
-}
 
 /* Add responsiveness for smaller screens */
 @media (max-width: 768px) {
