@@ -1,1 +1,43 @@
-<p>login-form works!</p>
+<form
+    formGroup="myForm"
+    class="card flex flex-wrap justify-center items-end gap-4"
+    (ngSubmit)="onSubmit()"
+    pForm
+>
+    <p-card 
+        header="Login"
+        [style]="{ width: '25rem', overflow: 'hidden'}">    
+    <p-floatlabel variant="on">
+            <input 
+                type="email"
+                pInputText
+                id="loginEmail"
+                [(ngModel)]="loginEmail"
+                [ngModelOptions]="{standalone: true}"
+                autocomplete="off" 
+                [required]="true"
+                />
+            <label for="loginEmail">E-Mail</label>
+        </p-floatlabel>
+        <br>
+        <p-floatlabel variant="on">
+            <input 
+            type="password"
+            pInputText
+            id="loginPassword" 
+            [(ngModel)]="loginPassword"
+            [ngModelOptions]="{standalone: true}"
+            autocomplete="off"
+            [required]="true"
+             />
+            <label for="loginPassword">Passwort</label>
+        </p-floatlabel>
+        <br>
+        <button
+            label="Submit"
+            type="submit"
+            pButton
+            >
+        </button>
+    </p-card>
+</form>
