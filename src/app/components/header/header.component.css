@@ -1,6 +1,4 @@
 header{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 20px;
     line-height: 100%;
     position: fixed;      
@@ -12,7 +10,7 @@ header{
     margin: 0;
     padding-bottom: 5%;     
     background-color: #7CAE9C;
-    color: black;         
+    color: blue;         
     text-align: center;   
     align-items: center;
     z-index: 1000; 
@@ -21,13 +19,4 @@ a{
     text-decoration: none;
 }
 
-.styledSVG{
-    padding: 0%;
-    width: 17.5%;
-    height: auto;
-    position: auto;
-    background-color: #7CAE9C;
-    text-decoration: none;
-
-}
-
+  
