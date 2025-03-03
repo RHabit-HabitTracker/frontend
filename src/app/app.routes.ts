@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { PlaceholderSiteComponent } from './pages/placeholder-site/placeholder-site.component';
-import { AppComponent } from './app.component';
 
 // Import main pages
 import { LandingComponent } from './pages/landing/landing.component';
