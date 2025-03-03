@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Toolbar } from 'primeng/toolbar';
+import { AvatarModule } from 'primeng/avatar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [Toolbar, AvatarModule, ButtonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
