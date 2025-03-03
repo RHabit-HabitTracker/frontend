@@ -16,7 +16,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 
 export const routes: Routes = [
-  { path: '', component: LoginComponent }, // Login Page
+  { path: '', component: LandingComponent }, // Login Page
   { path: 'landing', component: LandingComponent }, // Landing Page
   { path: 'dashboard', component: DashboardComponent }, // Dashboard (Logged In)
   { path: 'login', component: LoginComponent }, // Login
