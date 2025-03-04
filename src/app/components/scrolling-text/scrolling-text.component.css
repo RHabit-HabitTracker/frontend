@@ -48,6 +48,10 @@
   animation-delay: calc(-80s * var(--random-start, 0.5)); /* Random start */
 }
 
+.marquee:hover .scroll {
+  animation-play-state: paused;
+}
+
 .separator {
   width: 2px;
   background-color: #808080;
