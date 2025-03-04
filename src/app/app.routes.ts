@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { PlaceholderSiteComponent } from './pages/placeholder-site/placeholder-site.component';
-import { AppComponent } from './app.component';
 
 // Import main pages
 import { LandingComponent } from './pages/landing/landing.component';
@@ -16,7 +15,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 
 export const routes: Routes = [
-  { path: '', component: LoginComponent }, // Login Page
+  { path: '', component: LandingComponent }, // Login Page
   { path: 'landing', component: LandingComponent }, // Landing Page
   { path: 'dashboard', component: DashboardComponent }, // Dashboard (Logged In)
   { path: 'login', component: LoginComponent }, // Login
