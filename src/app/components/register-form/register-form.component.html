@@ -1,0 +1,56 @@
+<form
+    class="card flex flex-wrap justify-center items-end gap-4"
+    (ngSubmit)="onSubmit()"
+    [noValidate]="false"
+>
+    <p-card 
+        header="Register"
+        [style]="{ width: '25rem', overflow: 'hidden'}">    
+    <br>
+    <p-floatlabel variant="on">
+            <input 
+                type="email"
+                pInputText
+                id="registerEmail"
+                [(ngModel)]="registerEmail"
+                [ngModelOptions]="{standalone: true}"
+                autocomplete="off" 
+                [required]="true"
+                />
+            <label for="registerEmail">E-Mail</label>
+        </p-floatlabel>
+        <br>
+        <p-floatlabel variant="on">
+            <input 
+            type="password"
+            pInputText
+            id="registerPassword" 
+            [(ngModel)]="registerPassword"
+            [ngModelOptions]="{standalone: true}"
+            autocomplete="off"
+            [required]="true"
+             />
+            <label for="registerPassword">Passwort</label>
+        </p-floatlabel>
+        <br>
+        <p-floatlabel variant="on">
+            <input 
+            type="password"
+            pInputText
+            id="registerPasswordRepeat" 
+            [(ngModel)]="registerPasswordRepeat"
+            [ngModelOptions]="{standalone: true}"
+            autocomplete="off"
+            [required]="true"
+             />
+            <label for="registerPasswordRepeat">Passwort wiederholen</label>
+        </p-floatlabel>
+        <br>
+        <button
+            label="Submit"
+            type="submit"
+            pButton
+            >
+        </button>
+    </p-card>
+</form>
