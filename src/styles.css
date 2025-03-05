@@ -1,12 +1,12 @@
 /* Default (Light Mode) styles */
 @import "primeicons/primeicons.css";
 
-*{
-    font-family: 'Roboto';
+* {
+  font-family: "Roboto";
 }
 
 body {
-    width: 80vw;
-    justify-self: center;
-    margin:auto; /*Firefox specific fix*/
+  width: 80vw;
+  justify-self: center;
+  margin: auto; /*Firefox specific fix*/
 }
