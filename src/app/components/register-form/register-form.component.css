@@ -1,6 +1,12 @@
-.registerform {
-    display: grid;
-    place-items: center;
-    font-size:large;
-    height: 80vh;
+.registerForm {
+  display: grid;
+  place-items: center;
+  font-size: large;
+  height: 80vh;
+}
+
+.registerCard {
+  width: 100%;
+  max-width: 35rem;
+  overflow: "hidden";
 }

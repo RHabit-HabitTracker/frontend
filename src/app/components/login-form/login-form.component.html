@@ -1,70 +1,59 @@
 <div class="loginform">
-<p-card 
-        header="Login"
-        [style]="{ 
-            width: '30rem', 
-            overflow: 'hidden', 
-            }">
-    <form
-        (ngSubmit)="onSubmit()"
-        [noValidate]="false"
-    >
-    <br>  
-    <p-floatlabel variant="on">
-            <input 
-                type="email"
-                pInputText
-                fluid="true"
-                pSize="large"
-                id="loginEmail"
-                [(ngModel)]="loginEmail"
-                [ngModelOptions]="{standalone: true}"
-                autocomplete="off" 
-                [required]="true"
-                />
-            <label for="loginEmail">E-Mail</label>
-        </p-floatlabel>
-        <br>
-        <p-floatlabel variant="on">
-            <input 
-            type="password"
-            pInputText
-            fluid="true"
-            pSize="large"
-            id="loginPassword" 
-            [(ngModel)]="loginPassword"
-            [ngModelOptions]="{standalone: true}"
-            autocomplete="off"
-            [required]="true"
-             />
-            <label for="loginPassword">Passwort</label>
-        </p-floatlabel>
-        <br>
-        <button
-            label="Einloggen"
-            size="large"
-            fluid="true"
-            type="submit"
-            pButton
-            >
-        </button>
-
+  <p-card header="Login" class="loginCard">
+    <form (ngSubmit)="onSubmit()" [noValidate]="false">
+      <br />
+      <p-floatlabel variant="on">
+        <input
+          type="email"
+          pInputText
+          fluid="true"
+          pSize="large"
+          id="loginEmail"
+          [(ngModel)]="loginEmail"
+          [ngModelOptions]="{ standalone: true }"
+          autocomplete="off"
+          [required]="true"
+        />
+        <label for="loginEmail">E-Mail</label>
+      </p-floatlabel>
+      <br />
+      <p-floatlabel variant="on">
+        <input
+          type="password"
+          pInputText
+          fluid="true"
+          pSize="large"
+          id="loginPassword"
+          [(ngModel)]="loginPassword"
+          [ngModelOptions]="{ standalone: true }"
+          autocomplete="off"
+          [required]="true"
+        />
+        <label for="loginPassword">Passwort</label>
+      </p-floatlabel>
+      <br />
+      <button
+        label="Einloggen"
+        size="large"
+        fluid="true"
+        type="submit"
+        pButton
+      ></button>
     </form>
-    <br>
+    <br />
     <a routerLink="/reset-password">Passwort vergessen?</a>
-    <br><br>
+    <br /><br />
     <p-divider align="center" type="solid">
-        <p style="font-size:medium;">Noch keinen Account?</p>
+      <p style="font-size: medium">Noch keinen Account?</p>
     </p-divider>
 
     <button
-        label="Registrieren"
-        size="large"
-        fluid="true"
-        severity="info"
-        routerLink="/register"
-        pButton
-        >
-    </button>
-</p-card>
+      label="Registrieren"
+      size="large"
+      fluid="true"
+      severity="info"
+      routerLink="/register"
+      pButton
+    ></button>
+  </p-card>
 </div>
