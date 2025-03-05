@@ -1,16 +1,20 @@
-<form
-    class="card flex flex-wrap justify-center items-end gap-4"
+<div class="registerform">
+<p-card 
+        header="Registrieren"
+        [style]="{ 
+            width: '30rem', 
+            overflow: 'hidden'}">    
+    <br>
+    <form
     (ngSubmit)="onSubmit()"
     [noValidate]="false"
->
-    <p-card 
-        header="Register"
-        [style]="{ width: '25rem', overflow: 'hidden'}">    
-    <br>
+    >
     <p-floatlabel variant="on">
             <input 
                 type="email"
                 pInputText
+                pSize="large"
+                fluid="true"
                 id="registerEmail"
                 [(ngModel)]="registerEmail"
                 [ngModelOptions]="{standalone: true}"
@@ -24,6 +28,8 @@
             <input 
             type="password"
             pInputText
+            pSize="large"
+            fluid="true"
             id="registerPassword" 
             [(ngModel)]="registerPassword"
             [ngModelOptions]="{standalone: true}"
@@ -37,6 +43,8 @@
             <input 
             type="password"
             pInputText
+            pSize="large"
+            fluid="true"
             id="registerPasswordRepeat" 
             [(ngModel)]="registerPasswordRepeat"
             [ngModelOptions]="{standalone: true}"
@@ -47,10 +55,26 @@
         </p-floatlabel>
         <br>
         <button
-            label="Submit"
+            label="Registrieren"
             type="submit"
+            fluid="true"
+            severity="info"
+            size="large"
             pButton
             >
         </button>
-    </p-card>
-</form>
+    </form>
+    <br>
+    <p-divider align="center" type="solid">
+        <p style="font-size: medium;">Schon einen Account?</p>
+    </p-divider>
+    <button
+        label="Einloggen"
+        routerLink="/login"
+        fluid="true"
+        size="large"
+        pButton
+        >
+    </button>
+</p-card>
+</div>

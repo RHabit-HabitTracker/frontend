@@ -12,6 +12,7 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
 import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-service.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 export const routes: Routes = [
@@ -25,4 +26,5 @@ export const routes: Routes = [
   { path: 'privacy-policy', component: PrivacyPolicyComponent }, // Privacy Policy
   { path: 'contact', component: ContactComponent }, // Contact
   { path: 'placeholder-site', component: PlaceholderSiteComponent }, // Example Placeholder Site
+  { path: 'register', component: RegisterComponent }, // Register Site
 ];
