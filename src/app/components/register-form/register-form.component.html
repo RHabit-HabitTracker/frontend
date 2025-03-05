@@ -1,13 +1,14 @@
 <div class="registerform">
 <p-card 
-        header="Register"
-        [style]="{ width: '25rem', overflow: 'hidden'}">    
+        header="Registrieren"
+        [style]="{ 
+            width: '30rem', 
+            overflow: 'hidden'}">    
     <br>
     <form
-    class="card flex flex-wrap justify-center items-end gap-4"
     (ngSubmit)="onSubmit()"
     [noValidate]="false"
->
+    >
     <p-floatlabel variant="on">
             <input 
                 type="email"
@@ -48,11 +49,21 @@
         </p-floatlabel>
         <br>
         <button
-            label="Submit"
+            label="Registrieren"
             type="submit"
+            [size]="'large'"
             pButton
             >
         </button>
     </form>
+    <p-divider type="solid" />
+
+    <button
+        label="Einloggen"
+        routerLink="/login"
+        [size]="'large'"
+        pButton
+        >
+    </button>
 </p-card>
 </div>

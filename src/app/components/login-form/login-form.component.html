@@ -2,11 +2,10 @@
 <p-card 
         header="Login"
         [style]="{ 
-            width: '25rem', 
+            width: '30rem', 
             overflow: 'hidden', 
             }">
     <form
-        class="card flex flex-wrap justify-center items-end gap-4"
         (ngSubmit)="onSubmit()"
         [noValidate]="false"
     >
@@ -39,6 +38,7 @@
         <br>
         <button
             label="Einloggen"
+            [size]="'large'"
             type="submit"
             pButton
             >
@@ -53,6 +53,7 @@
 
     <button
         label="Registrieren"
+        [size]="'large'"
         routerLink="/register"
         pButton
         >

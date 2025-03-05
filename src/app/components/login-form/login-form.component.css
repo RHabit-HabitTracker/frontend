@@ -1,5 +1,6 @@
 .loginform {
-    justify-self: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    display: grid;
+    place-items: center;
+    font-size:larger;
+    height: 80vh;
 }
