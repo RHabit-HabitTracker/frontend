@@ -1,0 +1,17 @@
+/* Mobile-Ansicht: Verstecke normale Buttons */
+@media (max-width: 962px) {
+  .desktop-button {
+    display: none;
+  }
+
+  .mobile-button {
+    display: inline-flex;
+  }
+}
+
+/* Standard-Ansicht: Verstecke Icon-Only Buttons */
+@media (min-width: 962px) {
+  .mobile-button {
+    display: none;
+  }
+}
