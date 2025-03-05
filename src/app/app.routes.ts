@@ -22,7 +22,7 @@ export const routes: Routes = [
   { path: 'create-account', component: CreateAccountComponent }, // Create Account
   { path: 'imprint', component: ImprintComponent }, // Imprint
   { path: 'terms-of-service', component: TermsOfServiceComponent }, // ToS
-  { path: 'git', component: PrivacyPolicyComponent }, // Privacy Policy
+  { path: 'privacy-policy', component: PrivacyPolicyComponent }, // Privacy Policy
   { path: 'contact', component: ContactComponent }, // Contact
   { path: 'placeholder-site', component: PlaceholderSiteComponent }, // Example Placeholder Site
 ];

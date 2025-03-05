@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
     items = [
         { label: '', icon: 'pi pi-ellipsis-v', items: [
-            { label: 'Contact', icon: 'pi, pi-envelope', routerLink: '/contact'},
+            { label: 'Contact', icon: 'pi pi-envelope', routerLink: '/contact'},
             { label: 'About Us', icon: 'pi pi-info-circle', routerLink: '/landing'},
             { label: 'Impressum', icon: 'pi pi-book', routerLink: '/imprint'},
             { label: 'Terms of Service', icon: 'pi pi-paperclip', routerLink: '/terms-of-service'},
@@ -36,22 +36,11 @@ export class HeaderComponent implements OnInit {
     ];
 
     ngOnInit() {
-        this.isDarkMode = localStorage.getItem('darkMode') === 'true';
-        this.applyTheme();
     }
 
     toggleTheme() {
-        this.isDarkMode = !this.isDarkMode;
-        localStorage.setItem('darkMode', String(this.isDarkMode));
-        this.applyTheme();
     }
 
     applyTheme() {
-        const themeLink = document.getElementById('theme-css') as HTMLLinkElement;
-        if (this.isDarkMode) {
-        themeLink.href = 'assets/themes/lara-dark-blue/theme.css';
-        } else {
-        themeLink.href = 'assets/themes/lara-light-blue/theme.css';
-        }
     }
 }

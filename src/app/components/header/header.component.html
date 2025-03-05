@@ -1,34 +1,13 @@
-<!--<header>
-    <section>
-        <h4>Logo</h4>
-    </section>
-
-    <section>
-        
-    </section>
-
-    <section>
-        <h4>Maybe Text???</h4>
-    </section>
-
-    <section>
-        <h4>Dark/Light toggle</h4>
-    </section>
-
-    <section>
-        <h3><a routerLink="/login"><img src="assets/Missing_avatar.svg" alt="Login" class="styledSVG"></a></h3>
-    </section>
-</header>-->
-
 <header>
     <p-menubar [model]="items">
         <ng-template pTemplate="start">
-          <span>Space for <br> logo</span>
+          <span>Space for <br> logo </span>
+          <p-inputSwitch (onChange)="toggleTheme()"></p-inputSwitch>
         </ng-template>
-      
+
         <ng-template pTemplate="end">
           <!-- Toggle for dark mode / light mode -->
-          <p-inputSwitch [(ngModel)]="isDarkMode" (onChange)="toggleTheme()"></p-inputSwitch>
+          
         </ng-template>
       </p-menubar>
 </header>      
