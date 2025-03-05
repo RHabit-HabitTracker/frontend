@@ -5,7 +5,7 @@ import { SplitterModule } from 'primeng/splitter';
 
 @Component({
   selector: 'app-login',
-  imports: [RegisterFormComponent, LoginFormComponent, SplitterModule ],
+  imports: [LoginFormComponent, SplitterModule ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
