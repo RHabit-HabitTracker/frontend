@@ -8,4 +8,5 @@
 body {
     width: 80vw;
     justify-self: center;
+    margin:auto; /*Firefox specific fix*/
 }

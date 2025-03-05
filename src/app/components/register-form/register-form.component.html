@@ -1,80 +1,70 @@
-<div class="registerform">
-<p-card 
-        header="Registrieren"
-        [style]="{ 
-            width: '30rem', 
-            overflow: 'hidden'}">    
-    <br>
-    <form
-    (ngSubmit)="onSubmit()"
-    [noValidate]="false"
-    >
-    <p-floatlabel variant="on">
-            <input 
-                type="email"
-                pInputText
-                pSize="large"
-                fluid="true"
-                id="registerEmail"
-                [(ngModel)]="registerEmail"
-                [ngModelOptions]="{standalone: true}"
-                autocomplete="off" 
-                [required]="true"
-                />
-            <label for="registerEmail">E-Mail</label>
-        </p-floatlabel>
-        <br>
-        <p-floatlabel variant="on">
-            <input 
-            type="password"
-            pInputText
-            pSize="large"
-            fluid="true"
-            id="registerPassword" 
-            [(ngModel)]="registerPassword"
-            [ngModelOptions]="{standalone: true}"
-            autocomplete="off"
-            [required]="true"
-             />
-            <label for="registerPassword">Passwort</label>
-        </p-floatlabel>
-        <br>
-        <p-floatlabel variant="on">
-            <input 
-            type="password"
-            pInputText
-            pSize="large"
-            fluid="true"
-            id="registerPasswordRepeat" 
-            [(ngModel)]="registerPasswordRepeat"
-            [ngModelOptions]="{standalone: true}"
-            autocomplete="off"
-            [required]="true"
-             />
-            <label for="registerPasswordRepeat">Passwort wiederholen</label>
-        </p-floatlabel>
-        <br>
-        <button
-            label="Registrieren"
-            type="submit"
-            fluid="true"
-            severity="info"
-            size="large"
-            pButton
-            >
-        </button>
-    </form>
-    <br>
-    <p-divider align="center" type="solid">
-        <p style="font-size: medium;">Schon einen Account?</p>
-    </p-divider>
-    <button
-        label="Einloggen"
-        routerLink="/login"
+<div class="registerForm">
+  <p-card header="Registrieren" class="registerCard">
+    <form (ngSubmit)="onSubmit()" [noValidate]="false">
+      <p-floatlabel variant="on">
+        <input
+          type="email"
+          pInputText
+          pSize="large"
+          fluid="true"
+          id="registerEmail"
+          [(ngModel)]="registerEmail"
+          [ngModelOptions]="{ standalone: true }"
+          autocomplete="off"
+          [required]="true"
+        />
+        <label for="registerEmail">E-Mail</label>
+      </p-floatlabel>
+      <br />
+      <p-floatlabel variant="on">
+        <input
+          type="password"
+          pInputText
+          pSize="large"
+          fluid="true"
+          id="registerPassword"
+          [(ngModel)]="registerPassword"
+          [ngModelOptions]="{ standalone: true }"
+          autocomplete="off"
+          [required]="true"
+        />
+        <label for="registerPassword">Passwort</label>
+      </p-floatlabel>
+      <br />
+      <p-floatlabel variant="on">
+        <input
+          type="password"
+          pInputText
+          pSize="large"
+          fluid="true"
+          id="registerPasswordRepeat"
+          [(ngModel)]="registerPasswordRepeat"
+          [ngModelOptions]="{ standalone: true }"
+          autocomplete="off"
+          [required]="true"
+        />
+        <label for="registerPasswordRepeat">Passwort wiederholen</label>
+      </p-floatlabel>
+      <br />
+      <button
+        label="Registrieren"
+        type="submit"
         fluid="true"
+        severity="info"
         size="large"
         pButton
-        >
-    </button>
-</p-card>
+      ></button>
+    </form>
+    <br />
+    <p-divider align="center" type="solid">
+      <p style="font-size: medium">Schon einen Account?</p>
+    </p-divider>
+    <button
+      label="Einloggen"
+      routerLink="/login"
+      fluid="true"
+      size="large"
+      pButton
+    ></button>
+  </p-card>
 </div>
