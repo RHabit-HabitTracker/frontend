@@ -4,3 +4,9 @@
     font-size:large;
     height: 80vh;
 }
+
+.resetformcard {
+  width: 100%;
+  max-width: 35rem;
+  overflow: "hidden";
+}
