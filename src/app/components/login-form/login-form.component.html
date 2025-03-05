@@ -1,11 +1,12 @@
-<form
-    class="card flex flex-wrap justify-center items-end gap-4"
-    (ngSubmit)="onSubmit()"
-    [noValidate]="false"
->
-    <p-card 
+<p-card 
         header="Login"
-        [style]="{ width: '25rem', overflow: 'hidden'}">
+        [style]="{ width: '25rem', overflow: 'hidden'}"
+        styleClass="p-card">
+    <form
+        class="card flex flex-wrap justify-center items-end gap-4"
+        (ngSubmit)="onSubmit()"
+        [noValidate]="false"
+    >
     <br>  
     <p-floatlabel variant="on">
             <input 
@@ -34,12 +35,24 @@
         </p-floatlabel>
         <br>
         <button
-            label="Submit"
+            label="Einloggen"
             type="submit"
             pButton
             >
         </button>
-        <br><br>
-        <a href="/reset-password">Passwort vergessen?</a>
-    </p-card>
-</form>
+
+    </form>
+    
+    <br><br>
+    <a href="/reset-password">Passwort vergessen?</a>
+    
+    <p-divider type="solid" />
+
+    <button
+        label="Registrieren"
+        routerLink="/register"
+        pButton
+        >
+    </button>
+</p-card>
+
