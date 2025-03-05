@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
             { label: 'Terms of Service', icon: 'pi pi-paperclip', routerLink: '/terms-of-service'},
             { label: 'Privacy policy', icon: 'pi pi-cloud', routerLink: '/privacy-policy'},
         ], /*style: { 'min-width': '120px', 'text-align': 'center' } */},
-        { label: 'Login', icon: 'pi pi-user', routerLink: '/login', visible: true, style: { 'background-color': 'pink' },},
+        { label: 'Login', icon: 'pi pi-user', routerLink: '/login', visible: true,},
         
     ];
 

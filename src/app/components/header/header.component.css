@@ -13,16 +13,11 @@
     padding: 10px;
 }
 
-.p-mobile-menubar{
-    background-color: brown;
-}
-
 .p-menubar {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
     min-width: 12svw;
-    background-color: pink;
 }
 
 
