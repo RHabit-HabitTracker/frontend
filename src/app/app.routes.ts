@@ -13,6 +13,7 @@ import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-servi
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 
 
 export const routes: Routes = [
@@ -27,4 +28,5 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent }, // Contact
   { path: 'placeholder-site', component: PlaceholderSiteComponent }, // Example Placeholder Site
   { path: 'register', component: RegisterComponent }, // Register Site
+  { path: 'password-reset', component: PasswordResetComponent}, // Reset password Site
 ];

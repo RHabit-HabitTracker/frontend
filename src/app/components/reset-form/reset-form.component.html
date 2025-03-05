@@ -1,0 +1,81 @@
+<div class="resetform">
+    <p-card 
+            header="Passwort zurücksetzen"
+            [style]="{ 
+                width: '30rem', 
+                overflow: 'hidden'}">    
+        <br>
+        <form
+        (ngSubmit)="onSubmit()"
+        [noValidate]="false"
+        >
+        <p-floatlabel variant="on">
+                <input 
+                    type="email"
+                    pInputText
+                    pSize="large"
+                    fluid="true"
+                    id="accountEmail"
+                    [(ngModel)]="accountEmail"
+                    [ngModelOptions]="{standalone: true}"
+                    autocomplete="off" 
+                    [required]="true"
+                    />
+                <label for="accountEmail">E-Mail</label>
+            </p-floatlabel>
+            <br>
+            <p-floatlabel variant="on">
+                <input 
+                type="password"
+                pInputText
+                pSize="large"
+                fluid="true"
+                id="resetPassword" 
+                [(ngModel)]="resetPassword"
+                [ngModelOptions]="{standalone: true}"
+                autocomplete="off"
+                [required]="true"
+                 />
+                <label for="resetPassword">Passwort</label>
+            </p-floatlabel>
+            <br>
+            <p-floatlabel variant="on">
+                <input 
+                type="password"
+                pInputText
+                pSize="large"
+                fluid="true"
+                id="resetPasswordRepeat" 
+                [(ngModel)]="resetPasswordRepeat"
+                [ngModelOptions]="{standalone: true}"
+                autocomplete="off"
+                [required]="true"
+                 />
+                <label for="resetPasswordRepeat">Passwort wiederholen</label>
+            </p-floatlabel>
+            <br>
+            <button
+                label="Passwort zurücksetzen"
+                type="submit"
+                fluid="true"
+                severity="info"
+                size="large"
+                pButton
+                disabled="true"
+                >
+            </button>
+        </form>
+        <br>
+        <p-divider align="center" type="solid">
+            <p style="font-size: medium;">Doch an Passwort erinnert?</p>
+        </p-divider>
+        <button
+            label="Einloggen"
+            routerLink="/login"
+            fluid="true"
+            size="large"
+            pButton
+            >
+        </button>
+    </p-card>
+    </div>
