@@ -4,3 +4,8 @@
 *{
     font-family: 'Roboto';
 }
+
+body {
+    width: 80vw;
+    justify-self: center;
+}
