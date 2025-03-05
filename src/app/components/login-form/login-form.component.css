@@ -1,6 +1,6 @@
 .loginform {
     display: grid;
     place-items: center;
-    font-size:larger;
+    font-size:large;
     height: 80vh;
 }

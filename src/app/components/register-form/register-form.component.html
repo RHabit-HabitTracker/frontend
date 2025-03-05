@@ -13,6 +13,8 @@
             <input 
                 type="email"
                 pInputText
+                pSize="large"
+                fluid="true"
                 id="registerEmail"
                 [(ngModel)]="registerEmail"
                 [ngModelOptions]="{standalone: true}"
@@ -26,6 +28,8 @@
             <input 
             type="password"
             pInputText
+            pSize="large"
+            fluid="true"
             id="registerPassword" 
             [(ngModel)]="registerPassword"
             [ngModelOptions]="{standalone: true}"
@@ -39,6 +43,8 @@
             <input 
             type="password"
             pInputText
+            pSize="large"
+            fluid="true"
             id="registerPasswordRepeat" 
             [(ngModel)]="registerPasswordRepeat"
             [ngModelOptions]="{standalone: true}"
@@ -51,17 +57,20 @@
         <button
             label="Registrieren"
             type="submit"
-            [size]="'large'"
+            fluid="true"
+            size="large"
             pButton
             >
         </button>
     </form>
+    <br>
     <p-divider type="solid" />
-
+    <br>
     <button
         label="Einloggen"
         routerLink="/login"
-        [size]="'large'"
+        fluid="true"
+        size="large"
         pButton
         >
     </button>
