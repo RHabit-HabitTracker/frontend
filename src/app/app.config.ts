@@ -8,6 +8,7 @@ import { MyPreset } from './themes/aura-custom-theme';
 // import Aura from '@primeng/themes/aura'; // Aura theme - we can use this instead of MyPreset later if we want
 
 import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,6 +16,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     // PrimeNG providers:
     provideAnimationsAsync(),
-    providePrimeNG({ theme: { preset: MyPreset } }) // Change preset to Aura if you want to use the Aura theme
+    providePrimeNG({ theme: { preset: MyPreset } }), // Change preset to Aura if you want to use the Aura theme
+    provideHttpClient(),
   ],
 };
