@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { LandingComponent } from '../../pages/landing/landing.component';
 
 @Component({
   selector: 'app-login-form',
@@ -21,14 +23,29 @@ import { RouterLink } from '@angular/router';
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css',
 })
-export class LoginFormComponent {
-  loginEmail: string | undefined;
+export class LoginFormComponent implements OnInit {
+  loginEmail: string = '';
+  loginPassword: string = '';
+  currentUser: string | null = null;
+  loginMessage: string = '';
 
-  loginPassword: string | undefined;
+  constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    this.authService.currentUser$.subscribe((user) => {
+      this.currentUser = user;
+    });
+  }
 
   onSubmit() {
-    console.log('Form Submitted:');
-    console.log('Email:', this.loginEmail);
-    console.log('Password:', this.loginPassword);
+    if (this.authService.login(this.loginEmail, this.loginPassword)) {
+      this.router.navigate(['dashboard']);
+    } else {
+    }
+  }
+
+  onLogout() {
+    this.authService.logout();
+    this.loginMessage = 'Logged out.';
   }
 }

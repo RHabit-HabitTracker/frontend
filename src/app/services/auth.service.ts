@@ -5,13 +5,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private dummyLoginData: {
-    [key: string]: { username: string; password: string };
-  } = {
-    admin: { username: 'admin', password: 'admin123' },
-    user: { username: 'user', password: 'user123' },
-    test: { username: 'test', password: 'test123' },
-  };
+  private dummyLoginData: { username: string; password: string }[] = [
+    { username: 'admin@test.de', password: 'admin123' },
+    { username: 'user@test.de', password: 'user123' },
+    { username: 'test@test.de', password: 'test123' },
+  ];
 
   private currentUserSubject = new BehaviorSubject<string | null>(null);
   currentUser$: Observable<string | null> =
@@ -25,7 +23,10 @@ export class AuthService {
   }
 
   login(username: string, password: string): boolean {
-    const user = this.dummyLoginData[username];
+    console.log(username);
+    console.log(password);
+    const user = this.dummyLoginData.find((x) => x.username == username);
+    console.log(user);
     if (user && user.password === password) {
       this.currentUserSubject.next(username);
       localStorage.setItem('loggedInUser', username); // Persist across sessions
