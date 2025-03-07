@@ -1,0 +1,50 @@
+.heatmap-container {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+    grid-template-rows: repeat(8, 40px);
+    gap: 4px;
+    max-width: 500px;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .heatmap-day-label {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 8px;
+    color: aqua;
+  }
+  
+  .heatmap-week-label {
+    font-weight: bold;
+    text-align: center;
+    color: purple;
+  }
+  
+  .heatmap-cell {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .heatmap-cell:hover {
+    transform: scale(1.1);
+    outline: 2px solid black;
+  }
+  
+  .heatmap-cell.empty {
+    background-color: #e0e0e0;
+    cursor: default;
+  }
+  
