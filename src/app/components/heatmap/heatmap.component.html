@@ -1,0 +1,33 @@
+<div class="heatmap-container">
+    <h3>Task Completion Heatmap</h3>
+  
+    <div class="heatmap-grid">
+      <!-- Week Numbers (Top row) -->
+      <div class="heatmap-week-label"></div> <!-- Empty space for day labels -->
+      <div *ngFor="let week of weeks" class="heatmap-week-label">
+        W{{ week.weekNumber }}
+      </div>
+  
+      <!-- Day labels (left column) -->
+      <div *ngFor="let day of ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']" class="heatmap-day-label">
+        {{ day }}
+      </div>
+  
+      <!-- Heatmap Cells -->
+      <ng-container *ngFor="let week of weeks">
+        <div *ngFor="let day of [0, 1, 2, 3, 4, 5, 6]">
+          <div *ngIf="hasDay(week, day); else emptyCell"
+               class="heatmap-cell"
+               [style.background-color]="findDay(week, day)?.color"
+               [attr.title]="'Date: ' + findDay(week, day)?.date + ' | Completed: ' + findDay(week, day)?.percentage + '%'"
+               (click)="onDayClick(findDay(week, day)?.date)">
+          </div>
+          <ng-template #emptyCell>
+            <div class="heatmap-cell empty"></div>
+          </ng-template>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  
+<p>heatmap works</p>
