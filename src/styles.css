@@ -1,12 +1,13 @@
 /* Default (Light Mode) styles */
 @import "primeicons/primeicons.css";
+@import "@fontsource/roboto";
 
 *{
-    font-family: 'Roboto';
+  font-family: "Roboto", sans-serif; /* sans-serif as fallback */
 }
 
 body {
-    width: 80vw;
-    justify-self: center;
-    margin:auto; /*Firefox specific fix*/
+  width: 80vw;
+  justify-self: center;
+  margin:auto; /* Firefox specific fix */
 }
