@@ -1,0 +1,13 @@
+.privacypolity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+.privacypolicycard{
+    width: 40rem;
+    overflow: hidden;
+}
+  
