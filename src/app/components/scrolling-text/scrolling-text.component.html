@@ -1,19 +1,36 @@
-<div class="marquee">
-  <!-- marquee-content twice because without it we'd have a gap or need TS code for it to work -->
-  <div class="marquee-content scroll">
-    <span>"Warte nicht. Die Zeit wird niemals genau richtig sein." <strong>Napoleon Hill</strong></span> <span class="separator"></span>
-    <span>"Sei du selbst die Veränderung, die du dir wünschst für diese Welt." <strong>Mahatma Gandhi</strong></span> <span class="separator"></span>
-    <span>"Das Leben ist entweder ein gewagtes Abenteuer oder nichts." <strong>Helen Keller</strong></span> <span class="separator"></span>
-    <span>"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren." <strong>Bertolt Brecht</strong></span> <span class="separator"></span>
-    <span>"Es ist nie zu spät, das zu werden, was man hätte sein können." <strong>George Eliot</strong></span> <span class="separator"></span>
-    <span>"Alle Träume können wahr werden, wenn wir den Mut haben, ihnen zu folgen." <strong>Walt Disney</strong></span> <span class="separator"></span>
-  </div>
-  <div class="marquee-content scroll">
-    <span>"Warte nicht. Die Zeit wird niemals genau richtig sein." <strong>Napoleon Hill</strong></span> <span class="separator"></span>
-    <span>"Sei du selbst die Veränderung, die du dir wünschst für diese Welt." <strong>Mahatma Gandhi</strong></span> <span class="separator"></span>
-    <span>"Das Leben ist entweder ein gewagtes Abenteuer oder nichts." <strong>Helen Keller</strong></span> <span class="separator"></span>
-    <span>"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren." <strong>Bertolt Brecht</strong></span> <span class="separator"></span>
-    <span>"Es ist nie zu spät, das zu werden, was man hätte sein können." <strong>George Eliot</strong></span> <span class="separator"></span>
-    <span>"Alle Träume können wahr werden, wenn wir den Mut haben, ihnen zu folgen." <strong>Walt Disney</strong></span> <span class="separator"></span>
-  </div>
-</div>
+<ngx-fast-marquee
+  [speed]="'medium'"
+  [direction]="'left'"
+  [autoFill]="true"
+  [pauseOnHover]="true">
+  <p-fieldset legend="Napoleon Hill" class="marquee-card">
+    <p class="m-0">
+      <i>Warte nicht. Die Zeit wird niemals genau richtig sein.</i>
+    </p>
+  </p-fieldset>
+  <p-fieldset legend="Mahatma Gandhi" class="marquee-card">
+    <p class="m-0">
+      <i>Sei du selbst die Veränderung, die du dir wünschst für diese Welt.</i>
+    </p>
+  </p-fieldset>
+  <p-fieldset legend="Helen Keller" class="marquee-card">
+    <p class="m-0">
+      <i>Das Leben ist entweder ein gewagtes Abenteuer oder nichts.</i>
+    </p>
+  </p-fieldset>
+  <p-fieldset legend="Bertolt Brecht" class="marquee-card">
+    <p class="m-0">
+      <i>Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren.</i>
+    </p>
+  </p-fieldset>
+  <p-fieldset legend="George Eliot" class="marquee-card">
+    <p class="m-0">
+      <i>Es ist nie zu spät, das zu werden, was man hätte sein können.</i>
+    </p>
+  </p-fieldset>
+  <p-fieldset legend="Walt Disney" class="marquee-card">
+    <p class="m-0">
+      <i>Alle Träume können wahr werden, wenn wir den Mut haben, ihnen zu folgen.</i>
+    </p>
+  </p-fieldset>
+</ngx-fast-marquee>

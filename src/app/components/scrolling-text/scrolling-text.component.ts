@@ -1,8 +1,11 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { NgxFastMarqueeModule } from 'ngx-fast-marquee';
+import { CardModule } from 'primeng/card';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @Component({
   selector: 'app-scrolling-text',
-  imports: [],
+  imports: [NgxFastMarqueeModule, CardModule, FieldsetModule],
   templateUrl: './scrolling-text.component.html',
   styleUrl: './scrolling-text.component.css'
 })
