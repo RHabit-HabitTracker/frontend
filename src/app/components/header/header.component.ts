@@ -19,6 +19,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     FormsModule,
     ToggleSwitchModule,
     ToolbarModule,
+    RouterLink,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
