@@ -23,6 +23,7 @@ import { LandingComponent } from '../../pages/landing/landing.component';
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css',
 })
+
 export class LoginFormComponent implements OnInit {
   loginEmail: string = '';
   loginPassword: string = '';
