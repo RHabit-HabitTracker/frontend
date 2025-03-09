@@ -46,7 +46,18 @@ export class HeaderComponent implements OnInit {
         },
       ] /*style: { 'min-width': '120px', 'text-align': 'center' } */,
     },
-    { label: 'Login', icon: 'pi pi-user', routerLink: '/login', visible: true },
+    {
+      label: 'Login',
+      icon: 'pi pi-sign-in',
+      routerLink: '/login',
+      visible: true,
+    },
+    {
+      label: 'Registrieren',
+      icon: 'pi pi-user-plus',
+      routerLink: '/register',
+      visible: true,
+    },
   ];
 
   ngOnInit() {}
