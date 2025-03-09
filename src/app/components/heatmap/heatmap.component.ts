@@ -88,7 +88,6 @@ export class HeatmapComponent implements OnInit {
       // Create 7 days (Monday to Sunday) for the current week.
       for (let day = 0; day < 7; day++) {
         const dateString = currentDate.toISOString().split('T')[0];
-
         const recordedDay = this.taskCompletionData.find(d => d.date === dateString);
 
         week.days.push({
@@ -104,25 +103,22 @@ export class HeatmapComponent implements OnInit {
 
       this.weeks.push(week);
     }
-
-    // 🔥 If year has only 52 weeks, add invisible week 53
-    if (totalWeeks === 52) {
-      this.weeks.push({ weekNumber: 53, days: this.createEmptyWeek() });
-    }
   }
 
-  createEmptyWeek(): HeatmapDay[] {
-    return Array.from({ length: 7 }, (_, day) => ({
-      date: '',
-      percentage: 0,
-      dayOfWeek: day,
-      color: 'transparent' // 🔥 Invisible element
-    }));
-  }
-
-  getTotalISOWeeksInYear(year: number): number {
-    const lastDayOfYear = new Date(year, 11, 31);
-    return this.getISOWeekNumber(lastDayOfYear) === 1 ? 52 : 53;
+  /**
+   * Computes the Monday of the week that contains January 1 for the given year.
+   * This allows the full week (even if part of it belongs to the previous year) to be shown.
+   *
+   * @param year - The selected year.
+   * @returns The Date for the Monday starting the week that includes January 1.
+   */
+  getStartMondayForHeatmap(year: number): Date {
+    const jan1 = new Date(year, 0, 1);
+    // Adjust so that Monday is 0 and Sunday is 6.
+    const dayOfWeek = (jan1.getUTCDay() + 6) % 7;
+    const startMonday = new Date(jan1);
+    startMonday.setDate(jan1.getDate() - dayOfWeek);
+    return startMonday;
   }
 
   /**
