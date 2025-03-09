@@ -1,16 +1,50 @@
-ngx-fast-marquee {
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-}
-
-ngx-fast-marquee span {
-  margin-right: 20px;
-}
-
 .marquee-card {
-  margin-right: 20px;
+  margin-right: 1rem; /* Gap between cards */
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 0.2rem;
 }
 
-.marquee-card:last-child {
-  margin-right: 0; /* Optional, um den letzten Kartenrand zu entfernen */
+.marquee-card:hover {
+  transform: scale(1.04);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-container p-avatar {
+  margin-right: 0.5rem; /* Gap between name and img */
+}
+
+.p-avatar {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+@media only screen and (max-width: 600px) { /* Mobile large */
+  .p-avatar {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .marquee-card strong {
+    font-size: 0.9rem;
+  }
+  .marquee-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) { /* Mobile small */
+  .p-avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .marquee-card strong {
+    font-size: 0.8rem;
+  }
+  .marquee-card p {
+    font-size: 0.8rem;
+  }
 }
