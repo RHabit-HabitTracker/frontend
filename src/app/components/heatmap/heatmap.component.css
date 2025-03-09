@@ -1,55 +1,71 @@
 .heatmap-container {
-    border: 2px solid #ccc;
-    padding: 15px;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: center;
-    background-color: #f9f9f9;
-  }
-  
-  .heatmap-grid {
-    display: grid;
-    grid-template-columns: repeat(53, 30px);
-    grid-template-rows: repeat(8, 30px);
-    gap: 4px;
-    max-width: 90vw;
-    margin-top: 10px;
-    align-items: center;
-    grid-auto-flow: column;
+  border: 2px solid #ccc;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+  background-color: #8a8a8a;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+}
 
+.heatmap-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(54, 20px); /* 53 weeks + 1 empty space */
+  grid-template-rows: repeat(8, 20px);
+  gap: 6px 10px; /* row-gap: 6px, column-gap: 10px */
+  max-width: fit-content;
+  align-items: center;
+}
+
+.empty-cell {
+  width: 20px;
+  height: 20px;
+}
+
+.heatmap-day-label {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 80px;
+  color: blue;
+  font-size: small;
+}
+
+.heatmap-week-label {
+  font-weight: bold;
+  text-align: center;
+  color: purple;
+  font-size: x-small;
+}
+
+.heatmap-cell {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+  outline: 1px solid black;
+}
+
+.heatmap-cell.empty {
+  background-color: #404040;
+  cursor: default;
+}
+
+@media (max-width: 600px) {
+  .heatmap-container {
+    overflow-x: scroll;
   }
-  .empty-cell {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .heatmap-day-label {
-    font-weight: bold;
-    text-align: right;
-    padding-right: 8px;
-    color: purple;
-  }
-  
-  .heatmap-week-label {
-    font-weight: bold;
-    text-align: center;
-    color: aqua;
-  }
-  
-  .heatmap-cell {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .heatmap-cell:hover {
-    transform: scale(1.1);
-    outline: 2px solid black;
-  }
-  
-  .heatmap-cell.empty {
-    background-color: #e0e0e0;
-    cursor: default;
-  }
+}
