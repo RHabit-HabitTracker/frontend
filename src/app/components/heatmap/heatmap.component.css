@@ -9,25 +9,31 @@
   
   .heatmap-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 40px);
-    grid-template-rows: repeat(8, 40px);
+    grid-template-columns: repeat(53, 30px);
+    grid-template-rows: repeat(8, 30px);
     gap: 4px;
-    max-width: 500px;
+    max-width: 90vw;
     margin-top: 10px;
     align-items: center;
+    grid-auto-flow: column;
+
+  }
+  .empty-cell {
+    width: 40px;
+    height: 40px;
   }
   
   .heatmap-day-label {
     font-weight: bold;
     text-align: right;
     padding-right: 8px;
-    color: aqua;
+    color: purple;
   }
   
   .heatmap-week-label {
     font-weight: bold;
     text-align: center;
-    color: purple;
+    color: aqua;
   }
   
   .heatmap-cell {
@@ -47,4 +53,3 @@
     background-color: #e0e0e0;
     cursor: default;
   }
-  
