@@ -2,6 +2,7 @@
   overflow-x: auto;
   padding-bottom: 20px;
   background-color: #8a8a8a;
+  min-width: 250px;
 }
 
 .heatmap-grid {
@@ -13,13 +14,11 @@
 
 .heatmap-day-label {
   font-size: 12px;
-  color: blue;
   text-align: right;
 }
 
 .heatmap-week-label {
   font-size: 12px;
-  color: purple;
   text-align: center;
 }
 
@@ -36,4 +35,13 @@
 
 .heatmap-cell.empty {
   background-color: transparent;
+}
+
+.year-selector{
+  align-self: center;
+  padding-left: 40px;
+}
+
+h3{
+  padding-left: 40px;
 }
