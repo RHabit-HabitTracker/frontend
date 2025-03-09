@@ -1,8 +1,7 @@
 .marquee-card {
-  margin-right: 1rem; /* Gap between cards */
   user-select: none;
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 0.2rem;
+  margin: 0.5rem;
 }
 
 .marquee-card:hover {
