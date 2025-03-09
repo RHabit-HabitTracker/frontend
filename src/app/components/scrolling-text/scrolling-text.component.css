@@ -1,93 +1,50 @@
-.marquee {
-  overflow: hidden;
-  display: flex;
-  gap: 1rem; /* Gap between marquee-content both */
-  position: relative;
-  padding: 1rem 0;
+.marquee-card {
+  margin-right: 1rem; /* Gap between cards */
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 0.2rem;
 }
 
-/* Lines above and under marquee text */
-.marquee::before,
-.marquee::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #18181b; /* later with primeng theme */
-}
-.marquee::before {
-  top: 0;
-}
-.marquee::after {
-  bottom: 0;
+.marquee-card:hover {
+  transform: scale(1.04);
 }
 
-
-.marquee-content {
-  flex-shrink: 0; /* Size of the element stays, one line only */
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* Better gaps  */
-  user-select: none; /* Disable text selection */
-  min-width: 100%; /* takes width from parent. in this case .marquee */
-  gap: 1rem; /* Gap between quotes */
-  font-size: 3em; /* PC */
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
+.header-container p-avatar {
+  margin-right: 0.5rem; /* Gap between name and img */
+}
+
+.p-avatar {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+@media only screen and (max-width: 600px) { /* Mobile large */
+  .p-avatar {
+    width: 1.8rem;
+    height: 1.8rem;
   }
-  to {
-    transform: translateX(calc(-100% - 1rem));
+  .marquee-card strong {
+    font-size: 0.9rem;
   }
-}
-
-.scroll {
-  animation: scroll 80s linear infinite; /* PC */
-  animation-delay: calc(-80s * var(--random-start, 0.5)); /* Random start */
-}
-
-.marquee:hover .scroll {
-  animation-play-state: paused;
-}
-
-.separator {
-  width: 2px;
-  background-color: #808080;
-  margin: 0 0.5rem;
-  align-self: stretch;
-}
-
-/*
-max-width table:
-https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/
-*/
-
-@media only screen and (max-width: 992px) {
-  .marquee-content {
-    font-size: 1.8em; /* Tablet */
-  }
-  .scroll {
-    animation: scroll 70s linear infinite;
+  .marquee-card p {
+    font-size: 0.9rem;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .marquee-content {
-    font-size: 1.4em; /* Mobile large */
+@media only screen and (max-width: 480px) { /* Mobile small */
+  .p-avatar {
+    width: 1.5rem;
+    height: 1.5rem;
   }
-  .scroll {
-    animation: scroll 60s linear infinite;
+  .marquee-card strong {
+    font-size: 0.8rem;
   }
-}
-
-@media only screen and (max-width: 480px) {
-  .marquee-content {
-    font-size: 1.1em; /* Mobile small */
-  }
-  .scroll {
-    animation: scroll 50s linear infinite;
+  .marquee-card p {
+    font-size: 0.8rem;
   }
 }
