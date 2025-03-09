@@ -1,34 +1,42 @@
 <div class="heatmap-container">
   <h3>Task Completion Heatmap</h3>
 
-  <div class="heatmap-grid">
-    <!-- First empty cell (to align day labels) -->
-    <div class="empty-cell"></div>
+  <!-- Year Selector (Dropdown) -->
+  <div *ngIf="availableYears.length > 1" class="year-selector">
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect" (change)="changeYear($event)">
+      <option *ngFor="let year of availableYears" [value]="year" [selected]="year === selectedYear">
+        {{ year }}
+      </option>
+    </select>
+  </div>
 
-    <!-- Week Numbers (Top Row) -->
-    <div *ngFor="let week of weeks" class="heatmap-week-label">
-      W{{ week.weekNumber }}
-    </div>
+  <div class="heatmap-scroll">
+    <div class="heatmap-grid">
+      <!-- First empty cell (aligns day labels) -->
+      <div class="empty-cell"></div>
 
-    <!-- Heatmap Grid: Days & Week Columns -->
-    <ng-container *ngFor="let day of ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; let dayIndex = index">
-      <!-- Day Labels (First Column) -->
-      <div class="heatmap-day-label">
-        {{ day }}
+      <!-- Week Numbers (Top Row) -->
+      <div *ngFor="let week of weeks" class="heatmap-week-label">
+        W{{ week.weekNumber }}
       </div>
 
-      <!-- Week Columns -->
-      <ng-container *ngFor="let week of weeks">
-        <div *ngIf="hasDay(week, dayIndex); else emptyCell"
-             class="heatmap-cell"
-             [style.background-color]="findDay(week, dayIndex)?.color"
-             [attr.title]="'Date: ' + findDay(week, dayIndex)?.date + ' | Completed: ' + findDay(week, dayIndex)?.percentage + '%'"
-             (click)="onDayClick(findDay(week, dayIndex)?.date)">
+      <!-- Heatmap Grid: Days & Week Columns -->
+      <ng-container *ngFor="let day of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; let dayIndex = index">
+        <!-- Day Labels (First Column) -->
+        <div class="heatmap-day-label">
+          {{ day }}
         </div>
-        <ng-template #emptyCell>
-          <div class="heatmap-cell empty"></div>
-        </ng-template>
+
+        <!-- Week Columns -->
+        <ng-container *ngFor="let week of weeks">
+          <div class="heatmap-cell"
+               [style.background-color]="week.days[dayIndex].color"
+               [attr.title]="'Date: ' + formatDate(week.days[dayIndex].date) + (week.days[dayIndex].percentage ? ' | Completed: ' + week.days[dayIndex].percentage + '%' : ' | No tasks recorded')"
+               (click)="onDayClick(week.days[dayIndex])">
+          </div>
+        </ng-container>
       </ng-container>
-    </ng-container>
+    </div>
   </div>
 </div>
