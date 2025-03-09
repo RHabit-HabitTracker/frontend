@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
     items = [
         { label: '', icon: 'pi pi-ellipsis-v', items: [
             { label: 'Contact', icon: 'pi pi-envelope', routerLink: '/contact'},
-            { label: 'About Us', icon: 'pi pi-info-circle', routerLink: '/landing'},
             { label: 'Impressum', icon: 'pi pi-book', routerLink: '/imprint'},
             { label: 'Terms of Service', icon: 'pi pi-paperclip', routerLink: '/terms-of-service'},
             { label: 'Privacy policy', icon: 'pi pi-cloud', routerLink: '/privacy-policy'},
