@@ -1,39 +1,47 @@
-<div class="heatmap-container">
-  <h3>Task Completion Heatmap</h3>
+<p-card>
+  <ng-template pTemplate="title">Task Completion Heatmap</ng-template>
 
-  <!-- Year Selector (Dropdown) -->
-  <div *ngIf="availableYears.length > 1" class="year-selector">
-    <label for="yearSelect">Select Year:</label>
-    <select id="yearSelect" (change)="changeYear($event)">
-      <option *ngFor="let year of availableYears" [value]="year" [selected]="year === selectedYear">
-        {{ year }}
-      </option>
-    </select>
-  </div>
+  <ng-template pTemplate="content">
+    <!-- Year Selector (Dropdown) -->
+    <div *ngIf="availableYears.length > 1" class="year-selector">
+      <label for="yearSelect">Select Year:</label>
+      <p-select class="temp"
+        id="yearSelect" 
+        [options]="availableYears" 
+        [(ngModel)]="selectedYear"
+        (onChange)="changeYear($event.value)"> 
+      </p-select>
 
-  <div class="heatmap-scroll">
-    <div class="heatmap-grid">
-      <!-- First empty cell (aligns day labels) -->
-      <div class="empty-cell"></div>
+    </div>
 
-      <!-- Week Numbers (Top Row) -->
-      <div *ngFor="let week of weeks" class="heatmap-week-label">
-        W{{ week.weekNumber }}
-      </div>
+    <!-- Scrollable container -->
+    <div class="heatmap-scroll">
+      <div class="heatmap-grid">
+        <div class="empty-cell"></div>
 
-      <!-- Heatmap Grid: Days & Week Columns -->
-      <ng-container *ngFor="let day of ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; let dayIndex = index">
-        <!-- Day Labels (First Column) -->
-        <div class="heatmap-day-label">
-          {{ day }}
+        <!-- Week Labels -->
+        <div *ngFor="let week of weeks" class="heatmap-week-label">
+          W{{ week.weekNumber }}
         </div>
 
-        <!-- Week Columns -->
-        <ng-container *ngFor="let week of weeks">
-          <div class="heatmap-cell"
-               [style.background-color]="week.days[dayIndex].color"
-               [attr.title]="'Date: ' + formatDate(week.days[dayIndex].date) + (week.days[dayIndex].percentage ? ' | Completed: ' + week.days[dayIndex].percentage + '%' : ' | No tasks recorded')"
-               (click)="onDayClick(week.days[dayIndex])">
+        <!-- Heatmap Grid -->
+        <ng-container *ngFor="let day of ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; let dayIndex = index">
+          <div class="heatmap-day-label">
+            {{ day }}
           </div>
+
+          <ng-container *ngFor="let week of weeks">
+            <div class="heatmap-cell" 
+                 [style.background-color]="week.days[dayIndex].color"
+                 pTooltip="{{ 'Date: ' + formatDate(week.days[dayIndex].date) + (week.days[dayIndex].percentage ? ' | Completed: ' + week.days[dayIndex].percentage + '%' : ' | No tasks recorded') }}"
+                 tooltipPosition="bottom"
+                 appendTo="body"
+                 placeholder="bottom"
+                 (click)="onDayClick(week.days[dayIndex])">
+            </div>
+          </ng-container>
         </ng-container>
-      </ng-container>
+      </div>
+    </div>
+  </ng-template>
+</p-card>

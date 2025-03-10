@@ -1,17 +1,45 @@
-.heatmap-container {
-  overflow-x: auto;
-  padding-bottom: 20px;
-  background-color: #8a8a8a;
-  min-width: 250px;
-  padding: 10px;
+/* Limit the p-card size and enable internal scrolling */
+p-card {
+  width: 100%;
+  max-width: 80vw; /* Adjust as needed */
+  height: 480px; /* Adjust for your layout */
+  display: flex;
+  flex-direction: column;
 }
 
+.heatmap-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 380px; /* Adjust height based on p-card size */
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+.heatmap-cell {
+  width: 20px;
+  height: 20px;
+  border-radius: --border-radius; /* ✅ Consistent rounded corners */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* ✅ Smooth hover effect */
+}
+
+.year-selector{
+  padding-left: 40px;
+}
+
+.temp{
+  scale: 66%;
+  margin-left: -10px;
+}
+
+/* Maintain heatmap grid behavior */
 .heatmap-grid {
   display: grid;
   grid-template-columns: 30px repeat(53, 20px);
   grid-template-rows: 20px repeat(7, 20px);
   gap: 6px 10px;
-  padding-right: 15px;
+  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .heatmap-day-label {
@@ -22,28 +50,5 @@
 .heatmap-week-label {
   font-size: 12px;
   text-align: center;
-}
-
-.heatmap-cell {
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.heatmap-cell:hover {
-  outline: 1px solid black;
-}
-
-.heatmap-cell.empty {
-  background-color: transparent;
-}
-
-.year-selector{
-  align-self: center;
-  padding-left: 40px;
-}
-
-h3{
-  padding-left: 40px;
+  padding-right: 10px;
 }

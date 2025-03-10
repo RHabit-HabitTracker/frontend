@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { CardModule } from 'primeng/card';
+import { DropdownChangeEvent, DropdownModule } from 'primeng/dropdown';
+import { TooltipModule } from 'primeng/tooltip';
+import { FormsModule } from '@angular/forms';
+import { SelectModule } from 'primeng/select';
 
 interface HeatmapDay {
   date: string;
@@ -15,7 +20,13 @@ interface HeatmapWeek {
 
 @Component({
   selector: 'app-heatmap',
-  imports: [CommonModule],
+  imports: [CommonModule,
+            CardModule,
+            TooltipModule,
+            FormsModule,
+            DropdownModule,
+            SelectModule,
+  ],
   templateUrl: './heatmap.component.html',
   styleUrls: ['./heatmap.component.css']
 })
@@ -206,11 +217,10 @@ export class HeatmapComponent implements OnInit {
    *
    * @param event - The change event from the year selection input.
    */
-  changeYear(event: Event) {
-    const selectedValue = parseInt((event.target as HTMLSelectElement)?.value, 10);
-    if (!isNaN(selectedValue)) {
-      this.selectedYear = selectedValue;
+  changeYear(selectedYear: number) {
+    if (selectedYear) {
+      this.selectedYear = selectedYear;
       this.generateHeatmap();
     }
-  }
+  } 
 }
