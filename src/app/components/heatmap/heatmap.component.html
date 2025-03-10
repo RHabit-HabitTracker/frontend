@@ -1,0 +1,47 @@
+<p-card>
+  <ng-template pTemplate="title">Task Completion Heatmap</ng-template>
+
+  <ng-template pTemplate="content">
+    <!-- Year Selector (Dropdown) -->
+    <div *ngIf="availableYears.length > 1" class="year-selector">
+      <label for="yearSelect">Select Year:</label>
+      <p-select class="temp"
+        id="yearSelect" 
+        [options]="availableYears" 
+        [(ngModel)]="selectedYear"
+        (onChange)="changeYear($event.value)"> 
+      </p-select>
+
+    </div>
+
+    <!-- Scrollable container -->
+    <div class="heatmap-scroll">
+      <div class="heatmap-grid">
+        <div class="empty-cell"></div>
+
+        <!-- Week Labels -->
+        <div *ngFor="let week of weeks" class="heatmap-week-label">
+          W{{ week.weekNumber }}
+        </div>
+
+        <!-- Heatmap Grid -->
+        <ng-container *ngFor="let day of ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; let dayIndex = index">
+          <div class="heatmap-day-label">
+            {{ day }}
+          </div>
+
+          <ng-container *ngFor="let week of weeks">
+            <div class="heatmap-cell" 
+                 [style.background-color]="week.days[dayIndex].color"
+                 pTooltip="{{ 'Date: ' + formatDate(week.days[dayIndex].date) + (week.days[dayIndex].percentage ? ' | Completed: ' + week.days[dayIndex].percentage + '%' : ' | No tasks recorded') }}"
+                 tooltipPosition="bottom"
+                 appendTo="body"
+                 placeholder="bottom"
+                 (click)="onDayClick(week.days[dayIndex])">
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </ng-template>
+</p-card>

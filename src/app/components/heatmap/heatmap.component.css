@@ -1,0 +1,53 @@
+/* Limit the p-card size and enable internal scrolling */
+p-card {
+  width: 100%;
+  max-width: 80vw; /* Adjust as needed */
+  height: 480px; /* Adjust for your layout */
+  display: flex;
+  flex-direction: column;
+}
+
+.heatmap-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 380px; /* Adjust height based on p-card size */
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+.heatmap-cell {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.year-selector{
+  padding-left: 40px;
+}
+
+.temp{
+  scale: 66%;
+  margin-left: -10px;
+}
+
+/* Maintain heatmap grid behavior */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: 30px repeat(53, 20px);
+  grid-template-rows: 20px repeat(7, 20px);
+  gap: 6px 10px;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.heatmap-day-label {
+  font-size: 12px;
+  text-align: right;
+}
+
+.heatmap-week-label {
+  font-size: 12px;
+  text-align: center;
+  padding-right: 10px;
+}
