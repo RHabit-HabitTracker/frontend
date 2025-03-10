@@ -164,7 +164,7 @@ export class HeatmapComponent implements OnInit {
     } else if (percentage >= 0) {
       return '#FF4500'; // Red-Orange for 0-50%
     }
-    return '#404040'; // Dark grey for missing/invalid data
+    return '#6b7280'; // Dark grey for missing/invalid data
   }
 
   /**

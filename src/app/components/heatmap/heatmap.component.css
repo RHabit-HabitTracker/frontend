@@ -18,9 +18,8 @@ p-card {
 .heatmap-cell {
   width: 20px;
   height: 20px;
-  border-radius: --border-radius; /* ✅ Consistent rounded corners */
   cursor: pointer;
-  transition: all 0.2s ease-in-out; /* ✅ Smooth hover effect */
+  transition: all 0.2s ease-in-out;
 }
 
 .year-selector{
