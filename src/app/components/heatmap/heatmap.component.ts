@@ -139,14 +139,7 @@ export class HeatmapComponent implements OnInit {
    * @param year - The selected year.
    * @returns The Date for the Monday starting the week that includes January 1.
    */
-  getStartMondayForHeatmap(year: number): Date {
-    const jan1 = new Date(year, 0, 1);
-    // Adjust so that Monday is 0 and Sunday is 6.
-    const dayOfWeek = (jan1.getUTCDay() + 6) % 7;
-    const startMonday = new Date(jan1);
-    startMonday.setDate(jan1.getDate() - dayOfWeek);
-    return startMonday;
-  }
+
 
   /**
    * Converts a task completion percentage to a corresponding color.
